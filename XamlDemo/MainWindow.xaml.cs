@@ -23,7 +23,7 @@ namespace XamlDemo
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            string[] steden = ["Groningen", "Utrecht", "Dronten", "Lelystad"];
+            string[] steden = ["Groningen", "Utrecht", "Dronten", "Lelystad", "Nieuwegein"];
 
             lbx.ItemsSource = steden;
         }

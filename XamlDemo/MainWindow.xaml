@@ -1,0 +1,38 @@
+﻿<Window x:Class="XamlDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XamlDemo"
+        mc:Ignorable="d" Loaded="Window_Loaded"
+        Title="Mijn XAML Demo" Height="300" Width="400">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical">
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="5"></Setter>
+                    <Setter Property="Foreground" Value="White"></Setter>
+                </Style>
+            </StackPanel.Resources>
+            <Button Background="Green">groene knop</Button>
+            <Button Background="Blue">blauwe knop</Button>
+            <Button Background="Red">Rode knop</Button>
+
+            <ListBox Name="lbx" Margin="10" Height="100"></ListBox>
+        </StackPanel>
+
+        <DataGrid Grid.Column="1"></DataGrid>
+
+        <Label HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1">Status OK</Label>
+    </Grid>
+
+</Window>
